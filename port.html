@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanju Mishra - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(0, 0, 38);
+      color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      background-color: rgb(18, 18, 62);
+      padding: 0 20px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav ul li {
+      list-style: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: rgb(100, 150, 255);
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 80px 50px;
+      gap: 50px;
+    }
+
+    .leftSection {
+      flex: 1;
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+
+    .leftSection .subtitle {
+      font-size: 1.5rem;
+      color: rgb(150, 150, 200);
+      margin-top: 20px;
+    }
+
+    .leftSection .description {
+      font-size: 1rem;
+      color: rgb(180, 180, 220);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .ctaButtons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .ctaButtons button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+
+    .primaryBtn {
+      background-color: rgb(100, 150, 255);
+      color: white;
+    }
+
+    .primaryBtn:hover {
+      background-color: rgb(80, 130, 235);
+      transform: translateY(-2px);
+    }
+
+    .secondaryBtn {
+      background-color: transparent;
+      color: white;
+      border: 2px solid rgb(100, 150, 255);
+    }
+
+    .secondaryBtn:hover {
+      background-color: rgb(100, 150, 255);
+      transform: translateY(-2px);
+    }
+
+    .rightSection {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rightSection img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .skillsSection {
+      background-color: rgb(18, 18, 62);
+      padding: 60px 50px;
+      margin-top: 50px;
+    }
+
+    .skillsSection h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .skillsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skillCard {
+      background-color: rgb(30, 30, 80);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .skillCard:hover {
+      transform: translateY(-10px);
+      background-color: rgb(40, 40, 100);
+    }
+
+    .skillCard h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: rgb(100, 150, 255);
+    }
+
+    @media (max-width: 768px) {
+      .firstSection {
+        flex-direction: column;
+        margin: 40px 20px;
+      }
+
+      .leftSection {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .ctaButtons {
+        justify-content: center;
+      }
+
+      .skillsSection {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">
+        <h1>Sanju Mishra's Portfolio</h1>
+      </div>
+      <div class="right">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>Contact Me</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        <div>Hey, I'm <span style="color: rgb(100, 150, 255);">Sanju Mishra</span></div>
+        <div class="subtitle">BTech 3rd Year Student</div>
+        <div class="description">
+          Passionate about technology and software development. I love building innovative solutions and learning new
+          technologies.
+        </div>
+        <div class="ctaButtons">
+          <button class="primaryBtn">View Projects</button>
+          <button class="secondaryBtn">Contact Me</button>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="softwareEngineer.png" alt="Software Engineer Illustration">
+      </div>
+    </section>
+
+    <section class="skillsSection">
+      <h2>My Skills</h2>
+      <div class="skillsGrid">
+        <div class="skillCard">
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skillCard">
+          <h3>Programming</h3>
+          <p>Python, Java, C++</p>
+        </div>
+        <div class="skillCard">
+          <h3>Databases</h3>
+          <p>MySQL, MongoDB</p>
+        </div>
+        <div class="skillCard">
+          <h3>Problem Solving</h3>
+          <p>Data Structures & Algorithms</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
